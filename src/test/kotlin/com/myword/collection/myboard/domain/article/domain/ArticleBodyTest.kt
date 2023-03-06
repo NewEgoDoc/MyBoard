@@ -2,10 +2,8 @@ package com.myword.collection.myboard.domain.article.domain
 
 import com.myword.collection.myboard.exception.ErrorCode
 import com.myword.collection.myboard.exception.MyBoardException
-import org.assertj.core.api.Assertions
-import org.assertj.core.api.Assertions.*
-import org.assertj.core.api.ThrowableAssert
-import org.junit.jupiter.api.Assertions.*
+import org.assertj.core.api.Assertions.assertThat
+import org.assertj.core.api.Assertions.assertThatExceptionOfType
 import org.junit.jupiter.api.Test
 
 class ArticleBodyTest {
@@ -16,7 +14,7 @@ class ArticleBodyTest {
         val body = ArticleBody("body")
 
         //then
-        assertThat(body).isEqualTo("body")
+        assertThat(body).isEqualTo(ArticleBody("body"))
     }
 
     @Test
